@@ -1,7 +1,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
@@ -11,9 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     }
     
     func localNotificationPermission() -> Void {
-        var types : UIUserNotificationType = UIUserNotificationType.Badge |
-            UIUserNotificationType.Alert |
-            UIUserNotificationType.Sound
+        var types : UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
         var settings : UIUserNotificationSettings = UIUserNotificationSettings(forTypes: types, categories:nil)
         let app = UIApplication.sharedApplication()
         app.registerUserNotificationSettings(settings)

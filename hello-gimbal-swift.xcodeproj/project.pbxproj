@@ -12,19 +12,8 @@
 		74E354A71B4EF71C00356163 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74E354A51B4EF71C00356163 /* Main.storyboard */; };
 		74E354A91B4EF71C00356163 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74E354A81B4EF71C00356163 /* Images.xcassets */; };
 		74E354AC1B4EF71C00356163 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74E354AA1B4EF71C00356163 /* LaunchScreen.xib */; };
-		74E354B81B4EF71C00356163 /* hello_gimbal_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E354B71B4EF71C00356163 /* hello_gimbal_swiftTests.swift */; };
 		74E354C21B4EF73400356163 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E354C11B4EF73400356163 /* libz.dylib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		74E354B21B4EF71C00356163 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 74E354941B4EF71C00356163 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 74E3549B1B4EF71C00356163;
-			remoteInfo = "hello-gimbal-swift";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		74E3549C1B4EF71C00356163 /* hello-gimbal-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hello-gimbal-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,11 +23,8 @@
 		74E354A61B4EF71C00356163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74E354A81B4EF71C00356163 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		74E354AB1B4EF71C00356163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		74E354B11B4EF71C00356163 /* hello-gimbal-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "hello-gimbal-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		74E354B61B4EF71C00356163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		74E354B71B4EF71C00356163 /* hello_gimbal_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hello_gimbal_swiftTests.swift; sourceTree = "<group>"; };
 		74E354C11B4EF73400356163 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		74E354CE1B4F076300356163 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		74E354CE1B4F076300356163 /* GimbalObjectiveCBridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GimbalObjectiveCBridgingHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,13 +33,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				74E354C21B4EF73400356163 /* libz.dylib in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		74E354AE1B4EF71C00356163 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,9 +50,8 @@
 		74E354931B4EF71C00356163 = {
 			isa = PBXGroup;
 			children = (
-				741EE1BA1B56DD5F009569C7 /* Frameworks */,
 				74E3549E1B4EF71C00356163 /* hello-gimbal-swift */,
-				74E354B41B4EF71C00356163 /* hello-gimbal-swiftTests */,
+				741EE1BA1B56DD5F009569C7 /* Frameworks */,
 				74E3549D1B4EF71C00356163 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,7 +60,6 @@
 			isa = PBXGroup;
 			children = (
 				74E3549C1B4EF71C00356163 /* hello-gimbal-swift.app */,
-				74E354B11B4EF71C00356163 /* hello-gimbal-swiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,11 +69,11 @@
 			children = (
 				74E354A11B4EF71C00356163 /* AppDelegate.swift */,
 				74E354A31B4EF71C00356163 /* ViewController.swift */,
+				74E354CE1B4F076300356163 /* GimbalObjectiveCBridgingHeader.h */,
 				74E354A51B4EF71C00356163 /* Main.storyboard */,
 				74E354A81B4EF71C00356163 /* Images.xcassets */,
 				74E354AA1B4EF71C00356163 /* LaunchScreen.xib */,
 				74E3549F1B4EF71C00356163 /* Supporting Files */,
-				74E354CE1B4F076300356163 /* Header.h */,
 			);
 			path = "hello-gimbal-swift";
 			sourceTree = "<group>";
@@ -105,23 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				74E354A01B4EF71C00356163 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		74E354B41B4EF71C00356163 /* hello-gimbal-swiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				74E354B71B4EF71C00356163 /* hello_gimbal_swiftTests.swift */,
-				74E354B51B4EF71C00356163 /* Supporting Files */,
-			);
-			path = "hello-gimbal-swiftTests";
-			sourceTree = "<group>";
-		};
-		74E354B51B4EF71C00356163 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				74E354B61B4EF71C00356163 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -146,24 +106,6 @@
 			productReference = 74E3549C1B4EF71C00356163 /* hello-gimbal-swift.app */;
 			productType = "com.apple.product-type.application";
 		};
-		74E354B01B4EF71C00356163 /* hello-gimbal-swiftTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 74E354BE1B4EF71C00356163 /* Build configuration list for PBXNativeTarget "hello-gimbal-swiftTests" */;
-			buildPhases = (
-				74E354AD1B4EF71C00356163 /* Sources */,
-				74E354AE1B4EF71C00356163 /* Frameworks */,
-				74E354AF1B4EF71C00356163 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				74E354B31B4EF71C00356163 /* PBXTargetDependency */,
-			);
-			name = "hello-gimbal-swiftTests";
-			productName = "hello-gimbal-swiftTests";
-			productReference = 74E354B11B4EF71C00356163 /* hello-gimbal-swiftTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -181,10 +123,6 @@
 							};
 						};
 					};
-					74E354B01B4EF71C00356163 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 74E3549B1B4EF71C00356163;
-					};
 				};
 			};
 			buildConfigurationList = 74E354971B4EF71C00356163 /* Build configuration list for PBXProject "hello-gimbal-swift" */;
@@ -201,7 +139,6 @@
 			projectRoot = "";
 			targets = (
 				74E3549B1B4EF71C00356163 /* hello-gimbal-swift */,
-				74E354B01B4EF71C00356163 /* hello-gimbal-swiftTests */,
 			);
 		};
 /* End PBXProject section */
@@ -217,13 +154,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		74E354AF1B4EF71C00356163 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -236,23 +166,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		74E354AD1B4EF71C00356163 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				74E354B81B4EF71C00356163 /* hello_gimbal_swiftTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		74E354B31B4EF71C00356163 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 74E3549B1B4EF71C00356163 /* hello-gimbal-swift */;
-			targetProxy = 74E354B21B4EF71C00356163 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		74E354A51B4EF71C00356163 /* Main.storyboard */ = {
@@ -364,14 +278,13 @@
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../Frameworks\"",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "hello-gimbal-swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "hello-gimbal-swift/Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "hello-gimbal-swift/GimbalObjectiveCBridgingHeader.h";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
@@ -383,49 +296,14 @@
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../Frameworks\"",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "hello-gimbal-swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "hello-gimbal-swift/Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "hello-gimbal-swift/GimbalObjectiveCBridgingHeader.h";
 				VALID_ARCHS = "arm64 armv7 armv7s";
-			};
-			name = Release;
-		};
-		74E354BF1B4EF71C00356163 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "hello-gimbal-swiftTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hello-gimbal-swift.app/hello-gimbal-swift";
-			};
-			name = Debug;
-		};
-		74E354C01B4EF71C00356163 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "hello-gimbal-swiftTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hello-gimbal-swift.app/hello-gimbal-swift";
 			};
 			name = Release;
 		};
@@ -446,15 +324,6 @@
 			buildConfigurations = (
 				74E354BC1B4EF71C00356163 /* Debug */,
 				74E354BD1B4EF71C00356163 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		74E354BE1B4EF71C00356163 /* Build configuration list for PBXNativeTarget "hello-gimbal-swiftTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				74E354BF1B4EF71C00356163 /* Debug */,
-				74E354C01B4EF71C00356163 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
