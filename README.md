@@ -5,7 +5,7 @@ Minimal Gimbal Integration Example on iOS written in Swift. After setting up you
 Using the **Gimbal Manager**:
 [https://manager.gimbal.com/](https://manager.gimbal.com/)
 - create your Gimbal account 
-- create an **Application** using bundle ID **com.gimbal.hello-gimbal-swift** (generates you API KEY)
+- create an **Application** using bundle ID **com.gimbal.hello-gimbal-ios** (generates you API KEY)
 - create at least one **Place** (using a Beacon or Geofence) you can buy Beacons here [http://store.gimbal.com/](http://store.gimbal.com/)
 - create at least one **Communicate** (used for the local notification)
 - download the latest V2 SDK
