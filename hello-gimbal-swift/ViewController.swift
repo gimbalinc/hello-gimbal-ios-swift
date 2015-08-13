@@ -41,7 +41,7 @@ class ViewController: UITableViewController, GMBLPlaceManagerDelegate {
         }
         else {
             cell.textLabel!.text = NSString(format: "End: %@", visit.place.name) as String
-            cell.detailTextLabel!.text = NSDateFormatter.localizedStringFromDate(visit.arrivalDate, dateStyle: NSDateFormatterStyle.ShortStyle, timeStyle: NSDateFormatterStyle.MediumStyle)
+            cell.detailTextLabel!.text = NSDateFormatter.localizedStringFromDate(visit.departureDate, dateStyle: NSDateFormatterStyle.ShortStyle, timeStyle: NSDateFormatterStyle.MediumStyle)
         }
         
         return cell
