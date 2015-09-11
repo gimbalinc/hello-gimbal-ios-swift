@@ -15,7 +15,7 @@ Using the **Gimbal Manager**:
 - add the Gimbal.framework from the SDK zip you downloaded
 - to enable Gimbal to operate in the background set your application to **'Uses Bluetooth LE accessories'** background mode 
 
-Full Gimbal Docs [https://gimbal.com/docs](https://gimbal.com/docs)
+Full Gimbal Docs [http://docs.gimbal.com/](http://docs.gimbal.com/)
 
 ```swift
 import UIKit
