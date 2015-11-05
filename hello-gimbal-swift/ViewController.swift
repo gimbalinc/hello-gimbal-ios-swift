@@ -32,7 +32,7 @@ class ViewController: UITableViewController, GMBLPlaceManagerDelegate {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+        var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) 
         var visit: GMBLVisit = self.placeEvents[indexPath.row]
         
         if (visit.departureDate == nil) {

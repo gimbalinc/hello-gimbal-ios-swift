@@ -11,8 +11,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func localNotificationPermission() -> Void {
-        var types : UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound
-        var settings : UIUserNotificationSettings = UIUserNotificationSettings(forTypes: types, categories:nil)
+        let types : UIUserNotificationType = [UIUserNotificationType.Badge, UIUserNotificationType.Alert, UIUserNotificationType.Sound]
+        let settings : UIUserNotificationSettings = UIUserNotificationSettings(forTypes: types, categories:nil)
         let app = UIApplication.sharedApplication()
         app.registerUserNotificationSettings(settings)
     }

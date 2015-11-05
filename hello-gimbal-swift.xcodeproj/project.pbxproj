@@ -12,7 +12,8 @@
 		74E354A71B4EF71C00356163 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74E354A51B4EF71C00356163 /* Main.storyboard */; };
 		74E354A91B4EF71C00356163 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74E354A81B4EF71C00356163 /* Images.xcassets */; };
 		74E354AC1B4EF71C00356163 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74E354AA1B4EF71C00356163 /* LaunchScreen.xib */; };
-		74E354C21B4EF73400356163 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E354C11B4EF73400356163 /* libz.dylib */; };
+		ED050DCA1BEBD9E200CC65A0 /* Gimbal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED050DC91BEBD9E200CC65A0 /* Gimbal.framework */; };
+		ED050DCC1BEBDAC200CC65A0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ED050DCB1BEBDAC200CC65A0 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,8 +24,9 @@
 		74E354A61B4EF71C00356163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74E354A81B4EF71C00356163 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		74E354AB1B4EF71C00356163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		74E354C11B4EF73400356163 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		74E354CE1B4F076300356163 /* GimbalObjectiveCBridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GimbalObjectiveCBridgingHeader.h; sourceTree = "<group>"; };
+		ED050DC91BEBD9E200CC65A0 /* Gimbal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Gimbal.framework; sourceTree = "<group>"; };
+		ED050DCB1BEBDAC200CC65A0 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74E354C21B4EF73400356163 /* libz.dylib in Frameworks */,
+				ED050DCC1BEBDAC200CC65A0 /* libz.tbd in Frameworks */,
+				ED050DCA1BEBD9E200CC65A0 /* Gimbal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,7 +45,8 @@
 		741EE1BA1B56DD5F009569C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				74E354C11B4EF73400356163 /* libz.dylib */,
+				ED050DCB1BEBDAC200CC65A0 /* libz.tbd */,
+				ED050DC91BEBD9E200CC65A0 /* Gimbal.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,11 +116,14 @@
 		74E354941B4EF71C00356163 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Marshall Sprigg";
 				TargetAttributes = {
 					74E3549B1B4EF71C00356163 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 3ETG9R4M5P;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -275,6 +282,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -284,6 +293,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "hello-gimbal-swift/GimbalObjectiveCBridgingHeader.h";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
@@ -293,6 +303,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +314,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "hello-gimbal-swift/GimbalObjectiveCBridgingHeader.h";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
