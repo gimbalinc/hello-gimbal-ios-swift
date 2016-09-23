@@ -15,15 +15,15 @@ class ViewController: UITableViewController, GMBLPlaceManagerDelegate {
         GMBLCommunicationManager.startReceivingCommunications()
     }
     
-    func placeManager(_ manager: GMBLPlaceManager!, didBeginVisit visit: GMBLVisit!) -> Void {
+    func placeManager(_ manager: GMBLPlaceManager!, didBegin visit: GMBLVisit!) -> Void {
         NSLog("Begin %@", visit.place.description)
-        self.placeEvents.insert(visit, atIndex: 0)
+        self.placeEvents.insert(visit, at: 0)
         self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with:UITableViewRowAnimation.automatic)
     }
     
-    func placeManager(_ manager: GMBLPlaceManager!, didEndVisit visit: GMBLVisit!) -> Void {
+    func placeManager(_ manager: GMBLPlaceManager!, didEnd visit: GMBLVisit!) -> Void {
         NSLog("End %@", visit.place.description)
-        self.placeEvents.insert(visit, atIndex: 0)
+        self.placeEvents.insert(visit, at: 0)
         self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableViewRowAnimation.automatic)
     }
     
@@ -32,16 +32,16 @@ class ViewController: UITableViewController, GMBLPlaceManagerDelegate {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) 
-        var visit: GMBLVisit = self.placeEvents[indexPath.row]
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let visit: GMBLVisit = self.placeEvents[indexPath.row]
         
         if (visit.departureDate == nil) {
             cell.textLabel!.text = NSString(format: "Begin: %@", visit.place.name) as String
-            cell.detailTextLabel!.text = DateFormatter.localizedStringFromDate(visit.arrivalDate, dateStyle: DateFormatter.Style.ShortStyle, timeStyle: DateFormatter.Style.MediumStyle)
+            cell.detailTextLabel!.text = DateFormatter.localizedString(from: visit.arrivalDate, dateStyle: DateFormatter.Style.short, timeStyle: DateFormatter.Style.medium)
         }
         else {
             cell.textLabel!.text = NSString(format: "End: %@", visit.place.name) as String
-            cell.detailTextLabel!.text = DateFormatter.localizedStringFromDate(visit.arrivalDate, dateStyle: DateFormatter.Style.ShortStyle, timeStyle: DateFormatter.Style.MediumStyle)
+            cell.detailTextLabel!.text = DateFormatter.localizedString(from: visit.arrivalDate, dateStyle: DateFormatter.Style.short, timeStyle: DateFormatter.Style.medium)
         }
         
         return cell
