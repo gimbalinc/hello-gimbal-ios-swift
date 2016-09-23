@@ -124,6 +124,7 @@
 					74E3549B1B4EF71C00356163 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 3ETG9R4M5P;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -295,6 +296,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "hello-gimbal-swift/GimbalObjectiveCBridgingHeader.h";
+				SWIFT_VERSION = 3.0;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
@@ -316,6 +318,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "hello-gimbal-swift/GimbalObjectiveCBridgingHeader.h";
+				SWIFT_VERSION = 3.0;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
