@@ -1,8 +1,9 @@
 import UIKit
 
-class ViewController: UITableViewController, GMBLPlaceManagerDelegate {
+class ViewController: UITableViewController, GMBLPlaceManagerDelegate, GMBLCommunicationManagerDelegate {
     
     var placeManager: GMBLPlaceManager!
+    var communicationManager: GMBLCommunicationManager!
     var placeEvents : [GMBLVisit] = []
     
     override func viewDidLoad() -> Void {
@@ -12,6 +13,8 @@ class ViewController: UITableViewController, GMBLPlaceManagerDelegate {
         self.placeManager.delegate = self
         GMBLPlaceManager.startMonitoring()
         
+        communicationManager = GMBLCommunicationManager()
+        self.communicationManager.delegate = self
         GMBLCommunicationManager.startReceivingCommunications()
     }
     
@@ -25,6 +28,10 @@ class ViewController: UITableViewController, GMBLPlaceManagerDelegate {
         NSLog("End %@", visit.place.description)
         self.placeEvents.insert(visit, at: 0)
         self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableViewRowAnimation.automatic)
+    }
+    
+    func communicationManager(_ manager: GMBLCommunicationManager!, presentLocalNotificationsForCommunications communications: [Any]!, for visit: GMBLVisit!) -> [Any]! {
+        return communications
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: NSInteger) -> NSInteger {
