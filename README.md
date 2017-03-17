@@ -37,9 +37,11 @@ class ViewController: UITableViewController, GMBLPlaceManagerDelegate {
         
         placeManager = GMBLPlaceManager()
         self.placeManager.delegate = self
-        GMBLPlaceManager.startMonitoring()
-        
-        GMBLCommunicationManager.startReceivingCommunications()
+
+        communicationManager = GMBLCommunicationManager()
+        self.communicationManager.delegate = self
+
+        Gimbal.start()
     }
     
     func placeManager(manager: GMBLPlaceManager!, didBeginVisit visit: GMBLVisit!) -> Void {
