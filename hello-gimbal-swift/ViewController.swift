@@ -7,7 +7,7 @@ class ViewController: UITableViewController, GMBLPlaceManagerDelegate, GMBLCommu
     var placeEvents : [GMBLVisit] = []
     
     override func viewDidLoad() -> Void {
-        Gimbal.setAPIKey("c5e712c7-908f-4abc-985f-024737f256e3", options: nil)
+        Gimbal.setAPIKey("PUT_YOUR_GIMBAL_API_KEY_HERE", options: nil)
         
         placeManager = GMBLPlaceManager()
         self.placeManager.delegate = self
